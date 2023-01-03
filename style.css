@@ -1,15 +1,69 @@
-@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@700&family=Poppins&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Passion+One:wght@700&family=Poppins&display=swap");
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
 }
 
-body{
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+body {
+  width: 100%;
+  min-height: 100vh;
+  font-family: "Poppins";
+  justify-content: center;
+}
+
+:where(body, .wrapper-btn, header, .color-list, .color-item) {
+  display: flex;
+  align-items: center;
+}
+
+.wrapper-picker {
+  width: 400px;
+  background-color: rgb(219, 235, 252);
+  padding: 16px;
+}
+
+.wrapper-btn {
+  padding: 20px 0;
+  justify-content: center;
+}
+
+.picker-btn {
+  width: 150px;
+  height: 40px;
+  background-color: dodgerblue;
+  outline: 0;
+  border: 0;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+.wrapper-color header {
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.wrapper-color header .clear-color {
+  color: rgb(81, 168, 255);
+  cursor: pointer;
+}
+
+.color-list {
+  flex-wrap: wrap;
+}
+
+.color-item {
+  width: calc(100% / 3);
+}
+
+.color-item .rect-color {
+  width: 20px;
+  height: 20px;
+  background-color: darkturquoise;
+  margin-right: 5px;
+  border-radius: 3px;
 }
