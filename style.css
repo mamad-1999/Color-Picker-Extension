@@ -58,6 +58,8 @@ body {
 
 .color-item {
   width: calc(100% / 3);
+  margin-bottom: 10px;
+  cursor: pointer;
 }
 
 .color-item .rect-color {
