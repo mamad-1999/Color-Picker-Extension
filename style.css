@@ -5,16 +5,10 @@
   padding: 0;
   box-sizing: border-box;
   list-style: none;
-}
-
-body {
-  width: 100%;
-  min-height: 100vh;
   font-family: "Poppins";
-  justify-content: center;
 }
 
-:where(body, .wrapper-btn, header, .color-list, .color-item) {
+:where(.wrapper-btn, header, .color-list, .color-item) {
   display: flex;
   align-items: center;
 }
@@ -40,10 +34,10 @@ body {
   font-size: 1rem;
   color: #fff;
   cursor: pointer;
-  transition: background-color .3s ease;
+  transition: background-color 0.3s ease;
 }
 
-.picker-btn:hover{
+.picker-btn:hover {
   background-color: rgb(85, 66, 208);
 }
 
@@ -55,15 +49,16 @@ body {
 .wrapper-color header .clear-color {
   color: rgb(136, 122, 226);
   cursor: pointer;
-  transition: color .3s ease;
+  transition: color 0.3s ease;
 }
 
-.wrapper-color header .clear-color:hover{
-  color:rgb(181, 174, 226)
+.wrapper-color header .clear-color:hover {
+  color: rgb(181, 174, 226);
 }
 
-.wrapper-color header .title{
-    color: #eee;
+.wrapper-color header .title {
+  font-size: 1rem;
+  color: #eee;
 }
 
 .color-list {
@@ -84,8 +79,8 @@ body {
   border-radius: 3px;
 }
 
-.color-item .color-value{
-    color: #eee;
-    font-weight: 500;
-    text-transform: uppercase;
+.color-item .color-value {
+  color: #eee;
+  font-weight: 500;
+  text-transform: uppercase;
 }

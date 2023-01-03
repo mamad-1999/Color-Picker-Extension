@@ -41,19 +41,23 @@ const clearAllColor = () => {
 }
 
 const pickedColor = async () => {
-    try {
-        const eyeDraper = new EyeDropper()
-        const { sRGBHex } = await eyeDraper.open()
-        const convertToHex = rgbaToHex(sRGBHex)
-        navigator.clipboard.writeText(convertToHex)
-        if (!colorsPickedList.includes(convertToHex)) {
-            colorsPickedList.push(convertToHex)
+    document.body.style.display = "none"
+    setTimeout(async () => {
+        try {
+            const eyeDraper = new EyeDropper()
+            const { sRGBHex } = await eyeDraper.open()
+            const convertToHex = rgbaToHex(sRGBHex)
+            navigator.clipboard.writeText(convertToHex)
+            if (!colorsPickedList.includes(convertToHex)) {
+                colorsPickedList.push(convertToHex)
+            }
+            localStorage.setItem("picked-color", JSON.stringify(colorsPickedList))
+            createUiColorList()
+        } catch (error) {
+            console.log(error.message)
         }
-        localStorage.setItem("picked-color", JSON.stringify(colorsPickedList))
-        createUiColorList()
-    } catch (error) {
-        console.log(error.message)
-    }
+        document.body.style.display = "block"
+    }, 10);
 }
 
 pickerButton.addEventListener("click", pickedColor)
