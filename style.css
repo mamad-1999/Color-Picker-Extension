@@ -21,7 +21,7 @@ body {
 
 .wrapper-picker {
   width: 400px;
-  background-color: rgb(219, 235, 252);
+  background-color: #161623;
   padding: 16px;
 }
 
@@ -33,13 +33,18 @@ body {
 .picker-btn {
   width: 150px;
   height: 40px;
-  background-color: dodgerblue;
+  background-color: slateblue;
   outline: 0;
   border: 0;
   border-radius: 5px;
   font-size: 1rem;
   color: #fff;
   cursor: pointer;
+  transition: background-color .3s ease;
+}
+
+.picker-btn:hover{
+  background-color: rgb(85, 66, 208);
 }
 
 .wrapper-color header {
@@ -48,8 +53,17 @@ body {
 }
 
 .wrapper-color header .clear-color {
-  color: rgb(81, 168, 255);
+  color: rgb(136, 122, 226);
   cursor: pointer;
+  transition: color .3s ease;
+}
+
+.wrapper-color header .clear-color:hover{
+  color:rgb(181, 174, 226)
+}
+
+.wrapper-color header .title{
+    color: #eee;
 }
 
 .color-list {
@@ -68,4 +82,10 @@ body {
   background-color: darkturquoise;
   margin-right: 5px;
   border-radius: 3px;
+}
+
+.color-item .color-value{
+    color: #eee;
+    font-weight: 500;
+    text-transform: uppercase;
 }

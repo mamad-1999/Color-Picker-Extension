@@ -19,7 +19,7 @@ const createUiColorList = () => {
     const colorItem = colorsPickedList.map(color => {
         return `
         <li class="color-item">
-            <span class="rect-color" style="background:${color}; border: 1px solid ${color === "#ffffff" ? "#000" : color}"></span>
+            <span class="rect-color" style="background:${color}; border: 1px solid #bfbfbf;"></span>
             <span class="color-value" data-color="${color}">${color}</span>
         </li>
       `
