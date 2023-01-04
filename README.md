@@ -1,4 +1,4 @@
-# Color-Picker-Extention
+# Color-Picker-Extension
 simple color picker google chrome extension 🎨
 
 ### Use EyeDropper api for sampling color
