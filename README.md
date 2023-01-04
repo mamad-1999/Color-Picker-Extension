@@ -3,6 +3,7 @@ simple color picker google chrome extension 🎨
 
 ### Use EyeDropper api for sampling color
 this api does not supported in all browser *[clicked to read about](https://developer.mozilla.org/en-US/docs/Web/API/EyeDropper)*
+
 ---
 - save colors picked in localstorage
 - copy color
