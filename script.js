@@ -5,12 +5,6 @@ const clearAllBtn = document.querySelector(".clear-color")
 // if data in localStorage get in initial run code
 const colorsPickedList = JSON.parse(localStorage.getItem("picked-color") || "[]")
 
-// convert rgba to hex 
-const rgbaToHex = (rgba) => {
-    const rgb = rgba.substring(5, rgba.length - 1).split(",")
-    return "#" + ((1 << 24) + (+rgb[0] << 16) + (+rgb[1] << 8) + +rgb[2]).toString(16).slice(1);
-}
-
 // when click to color item color copied
 const copyColor = (element) => {
     copyText(element.dataset.color)
@@ -67,11 +61,10 @@ const pickedColor = async () => {
             const eyeDraper = new EyeDropper()
             // destructure color from Dropper api
             const { sRGBHex } = await eyeDraper.open()
-            // send value to convert rgba to hex function
-            const convertToHex = rgbaToHex(sRGBHex)
-            copyText(convertToHex)
-            if (!colorsPickedList.includes(convertToHex)) {
-                colorsPickedList.push(convertToHex)
+
+            copyText(sRGBHex)
+            if (!colorsPickedList.includes(sRGBHex)) {
+                colorsPickedList.push(sRGBHex)
             }
             // save color picked in localStorage and update ui
             localStorage.setItem("picked-color", JSON.stringify(colorsPickedList))
